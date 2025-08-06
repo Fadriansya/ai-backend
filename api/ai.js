@@ -62,7 +62,7 @@ export default async function handler(req, res) {
     });
 
     const pollResult = await poll.json();
-    const output = pollResult?.output || "Tidak ada output dari model.";
+    const output = Array.isArray(pollResult?.output) ? pollResult.output.join("") : pollResult?.output || "Tidak ada output dari model.";
 
     return res.status(200).json({ jawaban: output });
   } catch (err) {
