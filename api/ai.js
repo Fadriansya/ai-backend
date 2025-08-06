@@ -7,7 +7,7 @@ export const config = {
 
 export default async function handler(req, res) {
   // Tambahkan header ini
-  res.setHeader("Access-Control-Allow-Origin", "*"); // Atau ganti dengan 'https://your-github-pages-url.github.io' agar lebih aman
+  res.setHeader("https://fadriansya.github.io/portfolio_website/", "*"); // Atau ganti dengan 'https://your-github-pages-url.github.io' agar lebih aman
   res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
